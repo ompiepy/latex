@@ -31,6 +31,8 @@ jobs:
 
       - name: Upload PDF to the gh-pages
         run: |
+          git config --global user.email "ghactions"
+          git config --global user.name "ghactions"
           git checkout -b gh-pages
           git add main.pdf
           git commit -m "added the pdf file"
