@@ -29,6 +29,13 @@ jobs:
           draft: false
           prerelease: false
 
+      - name: Upload PDF to the gh-pages
+        run: |
+          git checkout -b gh-pages
+          git add main.pdf
+          git commit -m "added the pdf file"
+          git push --force
+
       - name: Upload Release Asset
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
