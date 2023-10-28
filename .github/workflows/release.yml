@@ -33,7 +33,8 @@ jobs:
         run: |
           git config --global user.email "ghactions"
           git config --global user.name "ghactions"
-          git checkout -b gh-pages
+          git checkout --orphan gh-pages
+          git rm -rf .
           git add main.pdf
           git commit -m "added the pdf file"
           git push --set-upstream origin gh-pages --force
