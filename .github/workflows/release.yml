@@ -36,7 +36,7 @@ jobs:
           git checkout -b gh-pages
           git add main.pdf
           git commit -m "added the pdf file"
-          git push --force
+          git push --set-upstream origin gh-pages --force
 
       - name: Upload Release Asset
         id: upload-release-asset 
